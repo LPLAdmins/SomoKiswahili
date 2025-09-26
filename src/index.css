@@ -1,0 +1,147 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Somo-inspired color palette for SomoKiswahili */
+    --background: 0 0% 100%;
+    --foreground: 220 15% 25%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 15% 25%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 15% 25%;
+
+    /* Primary: Somo Teal/Turquoise */
+    --primary: 174 100% 42%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 174 85% 55%;
+    --primary-glow: 174 90% 65%;
+
+    /* Secondary: Coral/Salmon */
+    --secondary: 12 85% 70%;
+    --secondary-foreground: 0 0% 100%;
+    --secondary-light: 12 75% 80%;
+
+    /* Accent: Vibrant Yellow (for CTAs) */
+    --accent: 45 93% 58%;
+    --accent-foreground: 220 15% 25%;
+    --accent-glow: 45 100% 70%;
+
+    /* Muted earth tones */
+    --muted: 220 13% 96%;
+    --muted-foreground: 220 10% 45%;
+
+    /* Navy for text emphasis */
+    --navy: 220 40% 15%;
+    --navy-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 174 100% 42%;
+
+    /* Design tokens */
+    --radius: 0.875rem;
+    
+    /* Somo-inspired gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-secondary: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--secondary-light)));
+    --gradient-accent: linear-gradient(135deg, hsl(var(--accent)), hsl(var(--accent-glow)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--secondary)) 100%);
+    --gradient-warm: linear-gradient(180deg, hsl(var(--background)), hsl(220 20% 98%));
+    
+    /* Somo-style shadows */
+    --shadow-soft: 0 4px 20px -4px hsl(var(--primary) / 0.15);
+    --shadow-medium: 0 10px 30px -5px hsl(var(--primary) / 0.2);
+    --shadow-strong: 0 20px 40px -10px hsl(var(--primary) / 0.25);
+    
+    /* Smooth animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222 84% 5%;
+    --foreground: 210 40% 98%;
+
+    --card: 222 84% 5%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222 84% 5%;
+    --popover-foreground: 210 40% 98%;
+
+    /* Primary: Keep Somo Teal/Turquoise in dark mode */
+    --primary: 174 100% 42%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 174 85% 55%;
+    --primary-glow: 174 90% 65%;
+
+    /* Secondary: Coral/Salmon */
+    --secondary: 12 85% 70%;
+    --secondary-foreground: 0 0% 100%;
+    --secondary-light: 12 75% 80%;
+
+    /* Accent: Vibrant Yellow */
+    --accent: 45 93% 58%;
+    --accent-foreground: 220 15% 25%;
+    --accent-glow: 45 100% 70%;
+
+    --muted: 217 33% 18%;
+    --muted-foreground: 215 20% 65%;
+
+    /* Navy for text emphasis */
+    --navy: 220 40% 15%;
+    --navy-foreground: 0 0% 100%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217 33% 18%;
+    --input: 217 33% 18%;
+    --ring: 174 100% 42%;
+    
+    --sidebar-background: 240 6% 10%;
+    --sidebar-foreground: 240 5% 96%;
+    --sidebar-primary: 174 100% 42%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 4% 16%;
+    --sidebar-accent-foreground: 240 5% 96%;
+    --sidebar-border: 240 4% 16%;
+    --sidebar-ring: 174 100% 42%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-inter;
+  }
+}
